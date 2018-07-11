@@ -36,4 +36,14 @@ class Java1Homework1 {
 
     }
 
+    public  static void task3(){
+    int a = 3;
+    if (a >= 0){
+        System.out.println("Ваше число - Положительное число");
+    }
+    if (a < 0){
+        System.out.println("Ваше число - отрицательное");
+    }
+    }
+
 }
