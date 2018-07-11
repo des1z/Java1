@@ -56,4 +56,9 @@ class Java1Homework1 {
         else return false;
     }
 
+    public static void task7(){
+        String myString = "Виктор";
+        System.out.println("Привет, " + myString);
+    }
+
 }
