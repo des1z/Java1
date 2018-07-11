@@ -1,12 +1,12 @@
 /**
  * @version 12.07.2018
- * @author Viktor Chernyaev
+ * @authors Viktor Chernyaev
  * @Java1 homework Lesson-1
  */
 
-public class Main {
+class Java1Homework1 {
 
     public static void main(String[] args) {
-        
+
     }
 }
