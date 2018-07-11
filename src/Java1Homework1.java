@@ -26,4 +26,14 @@ class Java1Homework1 {
         return a * (b + (c / d));
     }
 
+    public static boolean task2(int a, int b){
+        a = 11;
+        b = 21;
+        if (a >= 10 && a <= 20 || b >=10 && b <= 20){
+            return true;
+        }
+        else return false;
+
+    }
+
 }
