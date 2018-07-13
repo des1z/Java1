@@ -8,6 +8,8 @@ class Java1Homework2 {
     public static void main(String args[]) {
         System.out.println("Задание 1:");
         task1();
+        System.out.println("Задание 2:");
+        task2();
     }
 
     public static void task1() {
@@ -21,6 +23,15 @@ class Java1Homework2 {
         System.out.print("После:  ");
         for (int i : arr) {
             System.out.print(i + " ");
+        }
+    }
+
+    public static void task2() {
+        int[] nums = new int[8];
+        for (int i = 0, j =0; i < nums.length; i++, j +=3) {
+            nums[i]=j;
+            System.out.println(nums[i] +"");
+
         }
     }
 }
