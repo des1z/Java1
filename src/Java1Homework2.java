@@ -12,18 +12,20 @@ class Java1Homework2 {
         task2();
         System.out.println("Задание 3:");
         task3();
+        System.out.println("Задание 5:");
+        task5();
     }
 
     public static void task1() {
-        int[] arr = new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        int[] nums = new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         System.out.print("До: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-            if (arr[i] == 0) arr[i] = 1;
-            else arr[i] = 0;
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+            if (nums[i] == 0) nums[i] = 1;
+            else nums[i] = 0;
         }
         System.out.print("После:  ");
-        for (int i : arr) {
+        for (int i : nums) {
             System.out.print(i + " ");
         }
     }
@@ -50,5 +52,20 @@ class Java1Homework2 {
             System.out.print(i + " ");
         }
 
+    }
+    public static void task5() {
+        int[] nums = {1, 3, 5, 10, 13, 7, 5, 2, 4, 8, 9, 1, -4};
+        int min = nums[0];
+        int max = nums[0];
+        System.out.print("массив: ");
+        for (int i : nums) {
+            System.out.print(i + " ");
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            min = (min < nums[i]) ? min : nums[i];
+            max = (max > nums[i]) ? max : nums[i];
+        }
+        System.out.println("минимальное число: " + min + " " + "максимальное число: " + max);
     }
 }
