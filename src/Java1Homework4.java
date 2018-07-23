@@ -94,7 +94,21 @@ public class Java1Homework4 {
                     countHoriz++;
                     if (countHoriz == SIZE) return true;
                 }
+
+                if (map[i][j] == dot){
+                    // tested verticale
+                    countVer++;
+                    if (countVer == SIZE) return true;
+                }
+
             }
+
+            // tested Diagonal A
+            if (map[i][i] == dot){
+                countDiagonalA++;
+                
+            }
+
         }
     }
 
