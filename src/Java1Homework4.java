@@ -81,18 +81,21 @@ public class Java1Homework4 {
     }
 
     boolean checkWin(char dot) {
-        // check horizontals
-        if (map[0][0] == dot && map[0][1] == dot && map[0][2] == dot) return true;
-        if (map[1][0] == dot && map[1][1] == dot && map[1][2] == dot) return true;
-        if (map[2][0] == dot && map[2][1] == dot && map[2][2] == dot) return true;
-        // check verticals
-        if (map[0][0] == dot && map[1][0] == dot && map[2][0] == dot) return true;
-        if (map[0][1] == dot && map[1][1] == dot && map[2][1] == dot) return true;
-        if (map[0][2] == dot && map[1][2] == dot && map[2][2] == dot) return true;
-        // check diagonals
-        if (map[0][0] == dot && map[1][1] == dot && map[2][2] == dot) return true;
-        if (map[2][0] == dot && map[1][1] == dot && map[0][2] == dot) return true;
-        return false;
+        int countVer;
+        int countHoriz;
+        int countDiagonalA = 0;
+        int countDiagonalB = 0;
+        for (int i = 0; i <= SIZE - 1; i++){
+            countVer = 0;
+            countHoriz = 0;
+            for (int j; j <= SIZE - 1; j++){
+                // tested Horizontale
+                if (map[i][j] == dot){
+                    countHoriz++;
+                    if (countHoriz == SIZE) return true;
+                }
+            }
+        }
     }
 
     boolean isMapFull() {
