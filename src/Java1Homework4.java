@@ -88,7 +88,7 @@ public class Java1Homework4 {
         for (int i = 0; i <= SIZE - 1; i++){
             countVer = 0;
             countHoriz = 0;
-            for (int j; j <= SIZE - 1; j++){
+            for (int j = 0; j <= SIZE - 1; j++){
                 // tested Horizontale
                 if (map[i][j] == dot){
                     countHoriz++;
@@ -106,10 +106,17 @@ public class Java1Homework4 {
             // tested Diagonal A
             if (map[i][i] == dot){
                 countDiagonalA++;
-                
-            }
+                if (countDiagonalA == SIZE) return true;
+            } else countDiagonalA = 0;
+
+            // tested Diagonal B
+            if (map[i][SIZE - 1 - i] == dot) {
+                countDiagonalB++;
+                if (countDiagonalB == SIZE) return true;
+            } else countDiagonalB = 0;
 
         }
+        return false;
     }
 
     boolean isMapFull() {
