@@ -1,9 +1,8 @@
 /**
- * @version 23.07.2018
+ * @version 27.07.2018
  * @author Viktor Chernyaev
- * @Java1 homework Lesson-4
+ * @Java1 homework Lesson-5
  */
-import java.lang.*;
 class Java1Homework5 {
        public static void main(String[] args) {
            Worker[] worker = new Worker[5];
