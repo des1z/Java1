@@ -5,4 +5,7 @@
  * @link https://github.com/des1z
  */
 public class Java1Homework6 {
+    public static void main(String[] args) {
+        
+    }
 }
