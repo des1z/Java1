@@ -6,6 +6,8 @@
  */
 public class Java1Homework6 {
     public static void main(String[] args) {
-        
+     class Animal{
+         
+     }
     }
 }
