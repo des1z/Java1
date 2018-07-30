@@ -6,26 +6,75 @@
  */
 public class Java1Homework6 {
     public static void main(String[] args) {
-        Animal a = new Animal();
-        Cat c = new Cat();
-        Dog d = new Dog();
+        Cat cat = new Cat();
+        cat.run(200);
+        cat.swim(0);
+        cat.jump(2);
+
+        Dog dog = new Dog();
+        dog.run(500);
+        dog.jump(0.5);
+        dog.swim(10);
 
     }
 }
 
-public class Animal{
-int run;
-int swim;
-int jump;
+abstract class Animal{
+    private final int run = 0;
+    private final int swim = 0;
+    private final int jump = 0;
+    abstract void run(int lenght);
+    abstract void swim(int lenght);
+    abstract void jump(double height);
+
 
 }
 
-public class Cat extends Animal{
+class Cat extends Animal{
+    private final int run = 200;
+    private final double jump = 2;
 
+    @Override
+    void run(int lenght){
+        if ((lenght >= 0) && (lenght <= run)) System.out.println("Cat run: true");
+        else System.out.println("Cat run: false");
 }
 
-public class Dog extends Animal{
+    @Override
+    void swim(int lenght) {
+        System.out.println("Cat swim: false");
+    }
 
+    @Override
+    void jump(double height) {
+        if((height >= 0) && (height <= jump)) System.out.println("Cat jump: true");
+        else System.out.println("Cat jump: false");
+
+    }
+}
+
+class Dog extends Animal{
+    private final int run = 500;
+    private final double jump = 0.5;
+    private final int swim = 10;
+
+    @Override
+    void run(int lenght) {
+        if ((lenght >= 0) && (lenght <= run)) System.out.println("Dog run: true");
+        else System.out.println("Dog run: false");
+    }
+
+    @Override
+    void jump(double height) {
+        if ((height >= 0) && (height <= jump)) System.out.println("Dog jump: true");
+        else System.out.println("Dog jump: false");
+    }
+
+    @Override
+    void swim(int lenght) {
+        if((lenght >= 0) && (lenght <= swim)) System.out.println("Dog swim: true");
+        else System.out.println("Dog swim: false");
+    }
 }
 
 
