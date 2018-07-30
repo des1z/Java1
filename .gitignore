@@ -1,5 +1,5 @@
 # folders logs
-out/
+.out/
 .idea/
 *.iml
 *.md
