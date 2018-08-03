@@ -4,22 +4,10 @@
  * @Java1 homework Lesson-7
  * @link https://github.com/des1z
  */
-import java.io.IOException;
 
 public class Java1Homework7 {
     public static void main(String[] args) {
-        /*Cat[] x = {
-                new Cat("Alex", 10),
-                new Cat("Myrzik", 8),
-                new Cat("Barsik", 6),
-                new Cat("Odri", 12)
-        };*/
-        Cat cat = new Cat("Barsik", 10);
-        Plate plate = new Plate(10);
-        System.out.println(plate);
-        cat.eat(plate);
-        System.out.println(plate);
-
+        
     }
 }
 
@@ -34,9 +22,14 @@ class Cat {
         this.satisfied = false;
     }
 
+    @Override
+    public String toString() {
+        return "CAT: " + name + " | APPETITE: " + appetite + "| SATISFIED: " + satisfied;
+    }
+
     void eat(Plate plate){
-        if (plate.getAmountofFood() > appetite){
-            plate.discreaseFood(appetite);
+        if (plate.getFood() > appetite){
+            plate.decreaseFood(appetite);
             satisfied = true;
         }
     }
@@ -49,12 +42,22 @@ class Plate{
         this.food = food;
     }
 
-    void discreaseFood(int food) {
-        this.food -= food;
+    void decreaseFood(int appetite) {
+        if (food >= appetite) {
+            food -= appetite;
+        }
     }
 
     @Override
     public String toString() {
-        return "Food: " + food;
+        return "Plate: " + food;
+    }
+
+    int getFood() {
+        return food;
+    }
+
+    void increaseFood(int amount) {
+        food += amount;
     }
 }
