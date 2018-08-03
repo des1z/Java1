@@ -1,2 +1,5 @@
-/.idea/
+# folders logs
+out/
+.idea/
 *.iml
+*.md
