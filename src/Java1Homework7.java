@@ -7,7 +7,27 @@
 
 public class Java1Homework7 {
     public static void main(String[] args) {
-        
+        System.out.println("List of cats:");
+        Cat[] x = {
+                new Cat("Alex", 15),
+                new Cat("Myrzik", 11),
+                new Cat("Barsik", 14),
+                new Cat("Odri", 12)
+        };
+        Plate plate = new Plate(0);
+        for (Cat c : x) {
+            System.out.println(c);
+        }
+        System.out.println(plate);
+        System.out.println("increase food by 50");
+        plate.increaseFood(50);
+        System.out.println(plate);
+        System.out.println("Cats take food:");
+        for (Cat c : x) {
+            c.eat(plate);
+            System.out.println(c);
+            System.out.println(plate);
+        }
     }
 }
 
