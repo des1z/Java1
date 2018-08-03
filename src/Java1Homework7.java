@@ -26,14 +26,19 @@ public class Java1Homework7 {
 class Cat {
     private String name;
     private int appetite;
+    private boolean satisfied;
 
     Cat(String name, int appetite){
         this.name = name;
         this.appetite = appetite;
+        this.satisfied = false;
     }
 
     void eat(Plate plate){
-        plate.discreaseFood(appetite);
+        if (plate.getAmountofFood() > appetite){
+            plate.discreaseFood(appetite);
+            satisfied = true;
+        }
     }
 }
 
