@@ -1,2 +1,6 @@
-/.idea/
+# folders logs
+out/
+.idea/
 *.iml
+*.md
+Java1Homework5.java
